@@ -15,11 +15,12 @@ import SingleClassesPage from "../components/ClassesPage/SingleClassesPage";
 import RegistrationPage from "../components/RegistrationPage/RegistrationPage";
 import SingleRegistrationPage from "../components/RegistrationPage/SingleRegistrationPage";
 // ~cb-add-import~
-
+import LandingPage from '../components/Landing/Landing';
+import RegistrationCreateDialogComponent from '../components/RegistrationPage/SingleRegistrationPage';
 const MyRouter = () => {
     return (
         <Routes>
-            <Route path="" exact element={<Dashboard />} />
+            <Route path="" exact element={<LandingPage />} />
             <Route path="/dashboard" exact element={<Dashboard />} />
             <Route path="/login" exact element={<LoginPage />} />
             <Route path="/signup" exact element={<SignUpPage />} />
@@ -33,10 +34,11 @@ const MyRouter = () => {
                     <Route path="/classes/:singleClassesId" exact element={<SingleClassesPage />} />
                     <Route path="/registration" exact element={<RegistrationPage />} />
                     <Route path="/registration/:singleRegistrationId" exact element={<SingleRegistrationPage />} />
+                    <Route path="/register" exact element={<RegistrationCreateDialogComponent/>}/>
                 {/* ~cb-add-protected-route~ */}
             </Route>
             {/* ~cb-add-route~ */}
-
+            <Route path="/register" exact element={<RegistrationCreateDialogComponent/>}/>
             <Route path="*" element={<NoMatch />} />
         </Routes>
     );
