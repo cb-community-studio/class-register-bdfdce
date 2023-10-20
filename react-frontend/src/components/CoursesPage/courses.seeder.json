@@ -1,0 +1,9 @@
+[
+    {
+        "title": "intro to PHP",
+        "topic": "Laravel",
+        "creditHours": "90 minutes",
+        "price": "RM100",
+        "details": "introduction to Laravel PHP setup"
+    }
+]
